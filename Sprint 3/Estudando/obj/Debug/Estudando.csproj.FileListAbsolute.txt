@@ -1,0 +1,8 @@
+C:\Users\ClearTech\Documents\Aprofundando no c#\T1-MarianaMagalhaes\Estudando\bin\Debug\Estudando.exe.config
+C:\Users\ClearTech\Documents\Aprofundando no c#\T1-MarianaMagalhaes\Estudando\bin\Debug\Estudando.exe
+C:\Users\ClearTech\Documents\Aprofundando no c#\T1-MarianaMagalhaes\Estudando\bin\Debug\Estudando.pdb
+C:\Users\ClearTech\Documents\Aprofundando no c#\T1-MarianaMagalhaes\Estudando\obj\Debug\Estudando.csproj.AssemblyReference.cache
+C:\Users\ClearTech\Documents\Aprofundando no c#\T1-MarianaMagalhaes\Estudando\obj\Debug\Estudando.csproj.SuggestedBindingRedirects.cache
+C:\Users\ClearTech\Documents\Aprofundando no c#\T1-MarianaMagalhaes\Estudando\obj\Debug\Estudando.csproj.CoreCompileInputs.cache
+C:\Users\ClearTech\Documents\Aprofundando no c#\T1-MarianaMagalhaes\Estudando\obj\Debug\Estudando.exe
+C:\Users\ClearTech\Documents\Aprofundando no c#\T1-MarianaMagalhaes\Estudando\obj\Debug\Estudando.pdb

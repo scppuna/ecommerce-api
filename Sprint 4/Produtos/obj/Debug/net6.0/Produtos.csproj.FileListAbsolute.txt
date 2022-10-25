@@ -1,0 +1,30 @@
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\bin\Debug\net6.0\Produtos.exe
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\bin\Debug\net6.0\Produtos.deps.json
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\bin\Debug\net6.0\Produtos.runtimeconfig.json
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\bin\Debug\net6.0\Produtos.dll
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\bin\Debug\net6.0\Produtos.pdb
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\obj\Debug\net6.0\Produtos.csproj.AssemblyReference.cache
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\obj\Debug\net6.0\Produtos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\obj\Debug\net6.0\Produtos.AssemblyInfoInputs.cache
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\obj\Debug\net6.0\Produtos.AssemblyInfo.cs
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\obj\Debug\net6.0\Produtos.csproj.CoreCompileInputs.cache
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\obj\Debug\net6.0\Produtos.dll
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\obj\Debug\net6.0\refint\Produtos.dll
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\obj\Debug\net6.0\Produtos.pdb
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\obj\Debug\net6.0\Produtos.genruntimeconfig.cache
+C:\Estudos\Loja\LojaProdutos\Produtos\Produtos\obj\Debug\net6.0\ref\Produtos.dll
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\obj\Debug\net6.0\Produtos.csproj.AssemblyReference.cache
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\obj\Debug\net6.0\Produtos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\obj\Debug\net6.0\Produtos.AssemblyInfoInputs.cache
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\obj\Debug\net6.0\Produtos.AssemblyInfo.cs
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\obj\Debug\net6.0\Produtos.csproj.CoreCompileInputs.cache
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\obj\Debug\net6.0\Produtos.dll
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\obj\Debug\net6.0\refint\Produtos.dll
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\obj\Debug\net6.0\Produtos.pdb
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\bin\Debug\net6.0\Produtos.exe
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\bin\Debug\net6.0\Produtos.deps.json
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\bin\Debug\net6.0\Produtos.runtimeconfig.json
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\bin\Debug\net6.0\Produtos.dll
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\bin\Debug\net6.0\Produtos.pdb
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\obj\Debug\net6.0\Produtos.genruntimeconfig.cache
+C:\Users\scppu\OneDrive\Área de Trabalho\T1-MarianaMagalhaes\Sprint 4\Produtos\obj\Debug\net6.0\ref\Produtos.dll
