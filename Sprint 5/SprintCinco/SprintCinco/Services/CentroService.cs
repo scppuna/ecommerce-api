@@ -129,7 +129,7 @@ namespace SprintCinco.Services
         }
 
         public IReadOnlyList<CentroDistribuicao> PesquisarCentroDistribuicaoComFiltro(string nome, string logradouro, string bairro,
-       string localidade, string uf, string cep, [FromQuery] bool? status, [FromQuery] DateTime? dataCriacao, [FromQuery] DateTime? dataEdicao, [FromQuery] int? numero, [FromQuery] string ordem, [FromQuery] int itensPagina, [FromQuery] int paginaAtual)
+       string localidade, string uf, string cep, bool? status, DateTime? dataCriacao, DateTime? dataEdicao, int? numero, string ordem, int itensPagina, int paginaAtual)
         {
             return _dao.PesquisarCentroDistribuicaoComFiltro(nome, logradouro, bairro, localidade, uf, cep,
                 status, dataCriacao, dataEdicao, numero, ordem, itensPagina, paginaAtual);

@@ -171,11 +171,3 @@ C:\Users\ClearTech\Desktop\Diretorio\T1-MarianaMagalhaes\Sprint 5\SprintCinco\Sp
 C:\Users\ClearTech\Desktop\Diretorio\T1-MarianaMagalhaes\Sprint 5\SprintCinco\SprintCinco\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\ClearTech\Desktop\Diretorio\T1-MarianaMagalhaes\Sprint 5\SprintCinco\SprintCinco\bin\Debug\net5.0\System.Text.Encodings.Web.dll
 C:\Users\ClearTech\Desktop\Diretorio\T1-MarianaMagalhaes\Sprint 5\SprintCinco\SprintCinco\bin\Debug\net5.0\System.Text.Json.dll
-C:\Users\scppu\OneDrive\Área de Trabalho\Diretório\T1-MarianaMagalhaes\Sprint 5\SprintCinco\SprintCinco\bin\Debug\net5.0\System.Net.Http.Formatting.dll
-C:\Users\scppu\OneDrive\Área de Trabalho\Diretório\T1-MarianaMagalhaes\Sprint 5\SprintCinco\SprintCinco\bin\Debug\net5.0\Newtonsoft.Json.dll
-C:\Users\scppu\OneDrive\Área de Trabalho\Diretório\T1-MarianaMagalhaes\Sprint 5\SprintCinco\SprintCinco\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
-C:\Users\scppu\OneDrive\Área de Trabalho\Diretório\T1-MarianaMagalhaes\Sprint 5\SprintCinco\SprintCinco\bin\Debug\net5.0\Refit.dll
-C:\Users\scppu\OneDrive\Área de Trabalho\Diretório\T1-MarianaMagalhaes\Sprint 5\SprintCinco\SprintCinco\bin\Debug\net5.0\System.Net.Http.Json.dll
-C:\Users\scppu\OneDrive\Área de Trabalho\Diretório\T1-MarianaMagalhaes\Sprint 5\SprintCinco\SprintCinco\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\scppu\OneDrive\Área de Trabalho\Diretório\T1-MarianaMagalhaes\Sprint 5\SprintCinco\SprintCinco\bin\Debug\net5.0\System.Text.Encodings.Web.dll
-C:\Users\scppu\OneDrive\Área de Trabalho\Diretório\T1-MarianaMagalhaes\Sprint 5\SprintCinco\SprintCinco\bin\Debug\net5.0\System.Text.Json.dll

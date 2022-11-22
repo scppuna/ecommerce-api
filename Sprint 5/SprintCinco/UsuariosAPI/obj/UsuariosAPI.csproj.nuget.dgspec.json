@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\scppu\\OneDrive\\Área de Trabalho\\Diretório\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj": {}
+    "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\scppu\\OneDrive\\Área de Trabalho\\Diretório\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj": {
+    "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\scppu\\OneDrive\\Área de Trabalho\\Diretório\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj",
+        "projectUniqueName": "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj",
         "projectName": "UsuariosAPI",
-        "projectPath": "C:\\Users\\scppu\\OneDrive\\Área de Trabalho\\Diretório\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj",
-        "packagesPath": "C:\\Users\\scppu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\scppu\\OneDrive\\Área de Trabalho\\Diretório\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\obj\\",
+        "projectPath": "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj",
+        "packagesPath": "C:\\Users\\ClearTech\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\scppu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ClearTech\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,6 +82,10 @@
               "target": "Package",
               "version": "[5.0.5, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.12.0, )"
+            },
             "MySql.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.3, )"
@@ -97,6 +101,10 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.12.0, )"
             }
           },
           "imports": [

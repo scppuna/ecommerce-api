@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace UsuariosAPI.Data.Dto.Usuario
@@ -7,32 +6,7 @@ namespace UsuariosAPI.Data.Dto.Usuario
     public class CreateUsuarioDto
     {
         [Required]
-        public int Id { get; set; }
-
-        [Required(ErrorMessage = "O campo nome é obrigatório.")]
-        [RegularExpression(@"^[a-zA-Zà-úÁ-Ù' '\s]{1,40}$", ErrorMessage = "Somente letras são aceitas.")]
-        [StringLength(250, ErrorMessage = "Você excedeu o limite máximo de 250 caracteres")]
-        public string Name { get; set; }
-
-        [Required]
-        public string BirthDate { get; set; }
-
-        [Required]
-        [RegularExpression(@"^\d+$")]
-        [StringLength(11, ErrorMessage = "Você excedeu o limíte máximo de 11 caracteres")]
-        public string Cpf { get; set; }
-
-        [Required]
-        public string Cep { get; set; }
-
-        public string Logradouro { get; set; }
-
-        public string Bairro { get; set; }
-
-        [Required]
-        public int Numero { get; set; }
-
-        public string Complemento { get; set; }
+        public string Nome { get; set; }
 
         [Required]
         public string Username { get; set; }
@@ -48,7 +22,28 @@ namespace UsuariosAPI.Data.Dto.Usuario
         [Compare("Password")]
         public string Repassword { get; set; }
 
-        public bool Status { get; set; }
-        public DateTime DataCadastro { get; set; } = DateTime.Now;
+        [Required]
+        public DateTime DataNascimento { get; set; }
+
+        [Required]
+        public string CPF { get; set; }
+
+        [Required]
+        public string Cep { get; set; }
+
+        public string Logradouro { get; set; }
+        public string Localidade { get; set; }
+        public string Bairro { get; set; }
+
+        [Required]
+        public int Numero { get; set; }
+
+        public string Complemento { get; set; }
+        public string UF { get; set; }
+
+        public bool Status { get; set; } = true;
+
+        public DateTime DataCriacao { get; set; } = DateTime.Now;
     }
 }
+

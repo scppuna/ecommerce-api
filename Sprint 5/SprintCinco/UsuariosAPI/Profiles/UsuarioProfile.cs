@@ -10,7 +10,10 @@ namespace UsuariosAPI.Profiles
         public UsuarioProfile()
         {
             CreateMap<CreateUsuarioDto, Usuario>();
+            CreateMap<CustomIdentityUser, ReadUsuarioDto>();
             CreateMap<Usuario, IdentityUser<int>>();
+            CreateMap<Usuario, CustomIdentityUser>();
+            
         }
     }
 }

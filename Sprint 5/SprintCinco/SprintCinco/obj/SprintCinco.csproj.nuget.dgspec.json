@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\scppu\\OneDrive\\Área de Trabalho\\Diretório\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\SprintCinco\\SprintCinco.csproj": {}
+    "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\SprintCinco\\SprintCinco.csproj": {}
   },
   "projects": {
-    "C:\\Users\\scppu\\OneDrive\\Área de Trabalho\\Diretório\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\SprintCinco\\SprintCinco.csproj": {
+    "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\SprintCinco\\SprintCinco.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\scppu\\OneDrive\\Área de Trabalho\\Diretório\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\SprintCinco\\SprintCinco.csproj",
+        "projectUniqueName": "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\SprintCinco\\SprintCinco.csproj",
         "projectName": "SprintCinco",
-        "projectPath": "C:\\Users\\scppu\\OneDrive\\Área de Trabalho\\Diretório\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\SprintCinco\\SprintCinco.csproj",
-        "packagesPath": "C:\\Users\\scppu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\scppu\\OneDrive\\Área de Trabalho\\Diretório\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\SprintCinco\\obj\\",
+        "projectPath": "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\SprintCinco\\SprintCinco.csproj",
+        "packagesPath": "C:\\Users\\ClearTech\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\SprintCinco\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\scppu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ClearTech\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
