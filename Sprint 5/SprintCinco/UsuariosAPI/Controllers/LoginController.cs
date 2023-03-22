@@ -1,5 +1,7 @@
 ﻿using FluentResults;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using UsuariosAPI.Data.Requests;
 using UsuariosAPI.Services;
 
@@ -20,8 +22,8 @@ namespace UsuariosAPI.Controllers
         public IActionResult LogaUsuario(LoginRequest request)
         {
             Result resultado = _loginService.LogaUsuario(request);
-            if (resultado.IsFailed) return Unauthorized(resultado.Errors);
-            return Ok(resultado.Successes);
+            if (resultado.IsFailed) return Unauthorized(resultado.Errors.FirstOrDefault());
+            return Ok(resultado.Successes.FirstOrDefault());
         }
     }
 }

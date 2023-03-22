@@ -9,12 +9,14 @@ namespace UsuariosAPI.Services
 {
     public class TokenService
     {
-        public Token CreateToken(CustomIdentityUser usuario)
+        public Token CreateToken(CustomIdentityUser usuario, string role)
+
         {
             Claim[] direitosUsuario = new Claim[]
             {
                 new Claim("username", usuario.UserName),
                 new Claim("id", usuario.Id.ToString()),
+                new Claim(ClaimTypes.Role, role)
             };
 
             //chave para criptografar token

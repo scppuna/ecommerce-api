@@ -1,4 +1,4 @@
-﻿namespace SprintCinco.Data.Dtos.CentroDistribuicaoDtos
+﻿namespace IEcommerceAPI.Data.Dtos.CentroDistribuicaoDtos
 {
     public class EnderecoJson
     {

@@ -1,9 +1,9 @@
-﻿using SprintCinco.Models;
+﻿using IEcommerceAPI.Models;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace SprintCinco.Data.Dtos.ProdutoDtos
+namespace IEcommerceAPI.Data.Dtos.ProdutoDtos
 {
     public class CreateProdutoDto
     {

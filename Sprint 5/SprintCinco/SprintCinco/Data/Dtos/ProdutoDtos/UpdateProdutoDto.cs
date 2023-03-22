@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace SprintCinco.Data.Dtos.ProdutoDtos
+namespace IEcommerceAPI.Data.Dtos.ProdutoDtos
 {
     public class UpdateProdutoDto
     {

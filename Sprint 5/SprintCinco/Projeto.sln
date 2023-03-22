@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SprintCinco", "SprintCinco\SprintCinco.csproj", "{DC752F99-F4CC-4289-BCA5-46845B74A8DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IEcommerceAPI", "SprintCinco\IEcommerceAPI.csproj", "{DC752F99-F4CC-4289-BCA5-46845B74A8DD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsuariosAPI", "UsuariosAPI\UsuariosAPI.csproj", "{6E9B51B5-C803-444F-B339-60BED2A20273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceTestes", "EcommerceTestes\EcommerceTestes.csproj", "{F502EEE9-8C00-40ED-8C73-CF5BCD5D8F88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6E9B51B5-C803-444F-B339-60BED2A20273}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E9B51B5-C803-444F-B339-60BED2A20273}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E9B51B5-C803-444F-B339-60BED2A20273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F502EEE9-8C00-40ED-8C73-CF5BCD5D8F88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F502EEE9-8C00-40ED-8C73-CF5BCD5D8F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F502EEE9-8C00-40ED-8C73-CF5BCD5D8F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F502EEE9-8C00-40ED-8C73-CF5BCD5D8F88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

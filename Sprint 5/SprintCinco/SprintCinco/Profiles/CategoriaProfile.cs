@@ -1,17 +1,19 @@
 ﻿using AutoMapper;
-using SprintCinco.Data.Dtos.CategoriaDtos;
-using SprintCinco.Data.Dtos.SubcategoriaDtos;
-using SprintCinco.Models;
+using IEcommerceAPI.Repository;
+using IEcommerceAPI.Data.Dtos.CategoriaDtos;
+using IEcommerceAPI.Data.Dtos.SubcategoriaDtos;
+using IEcommerceAPI.Models;
 
-namespace SprintCinco.Profiles
+namespace IEcommerceAPI.Profiles
 {
     public class CategoriaProfile : Profile
     {
         public CategoriaProfile()
         {
-            CreateMap<CreateSubcategoriaDto, Categoria>();
+            CreateMap<CreateCategoriaDto, Categoria>();
             CreateMap<Categoria, ReadCategoriaDto>();
             CreateMap<UpdateCategoriaDto, Categoria>();
+            CreateMap<CategoriaRepository, Categoria>();
         }
     }
 }

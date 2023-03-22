@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace SprintCinco.Middleware
+namespace IEcommerceAPI.Middleware
 {
     [Serializable]
     internal class NullException : Exception

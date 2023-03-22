@@ -1,5 +1,6 @@
 ﻿
 using FluentResults;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using UsuariosAPI.Data.Dto.Usuario;
@@ -27,19 +28,21 @@ namespace UsuariosAPI.Controllers
 
         }
 
-        [HttpGet]
+        [Authorize(Roles = "regular, admin")]
+        [HttpGet]        
         public async Task<IActionResult> PesquisarUsuario([FromQuery]string username, [FromQuery] string cpf, [FromQuery] string email, [FromQuery] bool? status)
         {
             var resposta = await _cadastroService.PesquisarUsuarioComFiltro(username, cpf, email, status);
             return Ok(resposta);
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]        
         public async Task <IActionResult> EditarUsuario(int id, [FromBody]UpdateUsuarioDto updateUsuario)
         {
             Result result = await _cadastroService.EditarUsuario(id, updateUsuario);
             if (result.IsFailed) return StatusCode(500);
             return Ok();
         }
+
     }
 }

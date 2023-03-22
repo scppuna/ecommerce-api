@@ -5,17 +5,19 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using SprintCinco.Data;
+using IEcommerceAPI.Data;
 using System;
 using Microsoft.EntityFrameworkCore;
-using SprintCinco.Service;
+using IEcommerceAPI.Service;
 using System.Data;
 using MySql.Data.MySqlClient;
-using SprintCinco.Dao;
-using SprintCinco.Services;
-using SprintCinco.Middleware;
+using IEcommerceAPI.Repository;
+using IEcommerceAPI.Services;
+using IEcommerceAPI.Middleware;
+using EcommerceAPI.Data.Repository;
+using EcommerceAPI.Services;
 
-namespace SprintCinco
+namespace IEcommerceAPI
 {
     public class Startup
     {
@@ -29,19 +31,23 @@ namespace SprintCinco
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<CategoriaDao>();
-            services.AddScoped<SubcategoriaDao>();
-            services.AddScoped<ProdutoDao>();
-            services.AddScoped<ProdutoService>();
-            services.AddScoped<CDDao>();
-            services.AddScoped<CentroService>();
+            services.AddTransient<IDbConnection>((sp) => new MySqlConnection(Configuration.GetConnectionString("CategoriaConnection")));
             services.AddDbContext<AppDbContext>(opts => opts.UseLazyLoadingProxies().UseMySQL(Configuration.GetConnectionString("CategoriaConnection")));
+
+            services.AddScoped<CategoriaRepository>();
+            services.AddScoped<CategoriaService>();
+            services.AddScoped<SubcategoriaService>();
+            services.AddScoped<SubcategoriaRepository>();
+            services.AddScoped<ProdutoRepository>();
+            services.AddScoped<ProdutoService>();
+            services.AddScoped<CDRepository>();
+            services.AddScoped<CentroService>();
+            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "SprintCinco", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "IEcommerceAPI", Version = "v1" });
             });
-            services.AddTransient<IDbConnection>((sp) => new MySqlConnection(Configuration.GetConnectionString("CategoriaConnection")));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
@@ -52,7 +58,7 @@ namespace SprintCinco
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SprintCinco v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "IEcommerceAPI v1"));
             }
 
             app.UseHttpsRedirection();

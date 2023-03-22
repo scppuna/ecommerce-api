@@ -4,7 +4,7 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace SprintCinco.Middleware
+namespace IEcommerceAPI.Middleware
 {
     public class ErroMiddleware
 

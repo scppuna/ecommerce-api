@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 
-namespace SprintCinco.Models
+namespace IEcommerceAPI.Models
 {
     public class CentroDistribuicao
     {

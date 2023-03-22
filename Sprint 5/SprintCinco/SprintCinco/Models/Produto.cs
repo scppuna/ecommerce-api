@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace SprintCinco.Models
+namespace IEcommerceAPI.Models
 {
     public class Produto
     {

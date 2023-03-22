@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using UsuariosAPI.Models;
 
@@ -8,9 +9,11 @@ namespace UsuariosAPI.Data
 {
     public class UserDbContext : IdentityDbContext<CustomIdentityUser, IdentityRole<int>, int>
     {
-        public UserDbContext(DbContextOptions<UserDbContext> opt) : base(opt)
-        {
+        private IConfiguration _configuration;
 
+        public UserDbContext(DbContextOptions<UserDbContext> opt, IConfiguration configuration) : base(opt)
+        {
+            _configuration = configuration;
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -26,7 +29,7 @@ namespace UsuariosAPI.Data
                 CPF = "00000000000",
                 Cep = "000000000",
                 SecurityStamp = Guid.NewGuid().ToString(),
-                Id = 99999,
+                Id = 9999,
                 DataCriacao = DateTime.Now,
                 DataNascimento = DateTime.Now,
                 Status = true,
@@ -41,7 +44,9 @@ namespace UsuariosAPI.Data
 
             PasswordHasher<CustomIdentityUser> hasher = new PasswordHasher<CustomIdentityUser>();
 
-            admin.PasswordHash = hasher.HashPassword(admin, "Admin123!");
+            admin.PasswordHash = hasher.HashPassword(admin, _configuration
+                .GetValue<string>("admininfo:password"));
+
             builder.Entity<CustomIdentityUser>().HasData(admin);
 
             builder.Entity<IdentityRole<int>>().HasData(new IdentityRole<int>
@@ -61,7 +66,7 @@ namespace UsuariosAPI.Data
             builder.Entity<IdentityUserRole<int>>().HasData(new IdentityUserRole<int>
             {
                 RoleId = 99999,
-                UserId = 99999
+                UserId = 9999
             });
 
         }

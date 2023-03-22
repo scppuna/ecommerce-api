@@ -3,10 +3,10 @@ using FluentResults;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Org.BouncyCastle.Asn1.Ocsp;
-using SprintCinco.Dao;
-using SprintCinco.Data.Dtos.CentroDistribuicaoDtos;
-using SprintCinco.Middleware;
-using SprintCinco.Models;
+using IEcommerceAPI.Repository;
+using IEcommerceAPI.Data.Dtos.CentroDistribuicaoDtos;
+using IEcommerceAPI.Middleware;
+using IEcommerceAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,19 +16,19 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace SprintCinco.Services
+namespace IEcommerceAPI.Services
 {
     public class CentroService
     {
         private IMapper _mapper;
-        private CDDao _dao;
+        private CDRepository _repository;
 
 
-        public CentroService(IMapper mapper, CDDao dao)
+        public CentroService(IMapper mapper, CDRepository repository)
         {
 
             _mapper = mapper;
-            _dao = dao;
+            _repository = repository;
         }
 
         public async Task<CentroDistribuicao> PesquisaCentroCep(string cep)
@@ -52,13 +52,13 @@ namespace SprintCinco.Services
             centro.Bairro = pesquisaEndereco.Bairro;
             centro.Localidade = pesquisaEndereco.Localidade;
             centro.UF = pesquisaEndereco.UF;
-            _dao.CriarCD(centro);
+            _repository.CriarCD(centro);
             return centro;
         }
 
         public ReadCDDto BuscarCDPorId(int id)
         {
-            var centro = _dao.BuscarCDPorId(id);
+            var centro = _repository.BuscarCDPorId(id);
             if (centro != null)
             {
                 ReadCDDto buscarCD = _mapper.Map<ReadCDDto>(centro);
@@ -68,7 +68,7 @@ namespace SprintCinco.Services
         }
         public Result EditarCD(int id, UpdateCDDto centro)
         {
-            var centroDistribuicao = _dao.BuscarCDPorId(id);
+            var centroDistribuicao = _repository.BuscarCDPorId(id);
             if (centroDistribuicao == null)
             {
                 throw new ArgumentNullException("Centro nulo, favor verificar.");
@@ -84,21 +84,21 @@ namespace SprintCinco.Services
             centroDistribuicao.Bairro = centro.Bairro;
             centroDistribuicao.Localidade = centro.Localidade;
             centroDistribuicao.UF = centro.UF;
-            _dao.EditarCD(centroDistribuicao);
+            _repository.EditarCD(centroDistribuicao);
             return Result.Ok();
         }
 
         public Result EditarStatus(int id, [FromBody] UpdateCDDto centro)
         {
-            var pesquisa = _dao.BuscarCDPorId(id);
-            var pesquisaProduto = _dao.BuscaProdutoPorCentroID(id);
+            var pesquisa = _repository.BuscarCDPorId(id);
+            var pesquisaProduto = _repository.BuscaProdutoPorCentroID(id);
             centro.DataEdicao = DateTime.Now;
             if (pesquisaProduto == null)
             {
                 throw new NullException("Centro não localizado!");
             }
 
-            var pesquisaProdutoPorCentroDistribuicao = _dao.BuscaProdutoPorCentroID(id);
+            var pesquisaProdutoPorCentroDistribuicao = _repository.BuscaProdutoPorCentroID(id);
             if (pesquisaProdutoPorCentroDistribuicao.Status == true)
             {
                 throw new ArgumentException("Produto ativo.\nImpossível inativar Centro de Distribuição.");
@@ -113,25 +113,25 @@ namespace SprintCinco.Services
                 centro.Status = true;
 
             }
-            _dao.EditarCD(pesquisa);
+            _repository.EditarCD(pesquisa);
             return Result.Ok();
         }
 
         internal Result ExcluirCentroDeDistribuicao(int id)
         {
-            var centro = _dao.BuscarCDPorId(id);
+            var centro = _repository.BuscarCDPorId(id);
             if (centro == null)
             {
                 return Result.Fail("Produto não encontrado");
             }
-            _dao.ExcluirCD(centro);
+            _repository.ExcluirCD(centro);
             return Result.Ok();
         }
 
         public IReadOnlyList<CentroDistribuicao> PesquisarCentroDistribuicaoComFiltro(string nome, string logradouro, string bairro,
        string localidade, string uf, string cep, bool? status, DateTime? dataCriacao, DateTime? dataEdicao, int? numero, string ordem, int itensPagina, int paginaAtual)
         {
-            return _dao.PesquisarCentroDistribuicaoComFiltro(nome, logradouro, bairro, localidade, uf, cep,
+            return _repository.PesquisarCentroDistribuicaoComFiltro(nome, logradouro, bairro, localidade, uf, cep,
                 status, dataCriacao, dataEdicao, numero, ordem, itensPagina, paginaAtual);
         }
 

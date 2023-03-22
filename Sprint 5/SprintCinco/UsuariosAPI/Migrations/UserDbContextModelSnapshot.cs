@@ -42,6 +42,22 @@ namespace UsuariosAPI.Migrations
                         .HasDatabaseName("RoleNameIndex");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 99999,
+                            ConcurrencyStamp = "8db2bce8-2fa0-425d-aa22-2b784692ff95",
+                            Name = "admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = 99997,
+                            ConcurrencyStamp = "7642f4da-714d-40c5-a177-06aab7673fa4",
+                            Name = "regular",
+                            NormalizedName = "REGULAR"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -122,6 +138,13 @@ namespace UsuariosAPI.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = 9999,
+                            RoleId = 99999
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
@@ -245,6 +268,37 @@ namespace UsuariosAPI.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 9999,
+                            AccessFailedCount = 0,
+                            Bairro = "bairro",
+                            CPF = "00000000000",
+                            Cep = "000000000",
+                            Complemento = "complemento",
+                            ConcurrencyStamp = "3d3d1aca-278e-457e-91e4-a37e281dcf02",
+                            DataCriacao = new DateTime(2022, 12, 8, 10, 3, 50, 8, DateTimeKind.Local).AddTicks(7933),
+                            DataModificacao = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DataNascimento = new DateTime(2022, 12, 8, 10, 3, 50, 8, DateTimeKind.Local).AddTicks(8340),
+                            Email = "admin@admin.com",
+                            EmailConfirmed = true,
+                            Localidade = "localidade",
+                            LockoutEnabled = false,
+                            Logradouro = "logradouro",
+                            Nome = "nome",
+                            NormalizedEmail = "ADMIN@ADMIN.COM",
+                            NormalizedUserName = "ADMIN",
+                            Numero = 0,
+                            PasswordHash = "AQAAAAEAACcQAAAAEPSgUzVKNsSAKJ0K/NjO1Q4n/mmJYHPqgMaUBtbEUWJA2L5HZSJq8j3bsA8kmM6Q7Q==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "80c7d6bf-20dd-414c-b801-355d12fd90b0",
+                            Status = true,
+                            TwoFactorEnabled = false,
+                            UF = "uf",
+                            UserName = "admin"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>

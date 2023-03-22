@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SprintCinco.Models;
+using IEcommerceAPI.Models;
 
 
-namespace SprintCinco.Data
+namespace IEcommerceAPI.Data
 {
     public class AppDbContext : DbContext
     {

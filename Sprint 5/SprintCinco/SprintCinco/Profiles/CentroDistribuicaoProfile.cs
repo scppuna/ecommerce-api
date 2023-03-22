@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using SprintCinco.Data.Dtos.CentroDistribuicaoDtos;
-using SprintCinco.Models;
+using IEcommerceAPI.Data.Dtos.CentroDistribuicaoDtos;
+using IEcommerceAPI.Models;
 
-namespace SprintCinco.Profiles
+namespace IEcommerceAPI.Profiles
 {
     public class CentroDistribuicaoProfile : Profile
     {

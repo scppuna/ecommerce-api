@@ -1,24 +1,21 @@
 ﻿using FluentResults;
 using Microsoft.AspNetCore.Mvc;
-using SprintCinco.Data.Dtos.ProdutoDtos;
-using SprintCinco.Models;
-using SprintCinco.Dao;
-using SprintCinco.Service;
+using IEcommerceAPI.Data.Dtos.ProdutoDtos;
+using IEcommerceAPI.Models;
+using IEcommerceAPI.Repository;
+using IEcommerceAPI.Service;
 using System.Collections.Generic;
 
-namespace SprintCinco.Controllers
+namespace IEcommerceAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class ProdutoController : ControllerBase
     {
         private ProdutoService _produtoService;
-        private ProdutoDao _produtoDao;
-
-        public ProdutoController(ProdutoService produtoService, ProdutoDao produtoDao)
+        public ProdutoController(ProdutoService produtoService)
         {
             _produtoService = produtoService;
-            _produtoDao = produtoDao;
         }
 
         [HttpPost]

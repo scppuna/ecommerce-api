@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj": {}
+    "C:\\Users\\scppu\\Downloads\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj": {
+    "C:\\Users\\scppu\\Downloads\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj",
+        "projectUniqueName": "C:\\Users\\scppu\\Downloads\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj",
         "projectName": "UsuariosAPI",
-        "projectPath": "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj",
-        "packagesPath": "C:\\Users\\ClearTech\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ClearTech\\Desktop\\Diretorio\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\obj\\",
+        "projectPath": "C:\\Users\\scppu\\Downloads\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\UsuariosAPI.csproj",
+        "packagesPath": "C:\\Users\\scppu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\scppu\\Downloads\\T1-MarianaMagalhaes\\Sprint 5\\SprintCinco\\UsuariosAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ClearTech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\scppu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,9 +40,13 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[12.0.0, )"
+              "version": "[8.1.1, )"
             },
             "Dapper": {
               "target": "Package",
@@ -52,9 +56,13 @@
               "target": "Package",
               "version": "[2.5.0, )"
             },
-            "Microsoft.AspNet.WebApi.Client": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[5.2.9, )"
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[5.0.11, )"
             },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
@@ -63,6 +71,10 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.5, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Formatters.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -82,25 +94,17 @@
               "target": "Package",
               "version": "[5.0.5, )"
             },
-            "Microsoft.IdentityModel.Tokens": {
-              "target": "Package",
-              "version": "[6.12.0, )"
-            },
             "MySql.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.3, )"
             },
-            "Refit": {
+            "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[6.3.2, )"
+              "version": "[12.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
-            },
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.8.3, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",

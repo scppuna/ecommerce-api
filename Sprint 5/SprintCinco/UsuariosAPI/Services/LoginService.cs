@@ -20,8 +20,9 @@ namespace UsuariosAPI.Services
 
         public Result LogaUsuario(LoginRequest request)
         {
+            var usuario = _signInManager.UserManager.FindByEmailAsync(request.Email);
             var resultadoIdentity = _signInManager
-                .PasswordSignInAsync(request.Username, request.Password, false, false); //alteração para tentativa de login e bloqueio
+                .PasswordSignInAsync(usuario.Result.UserName, request.Password, false, false); //alteração para tentativa de login e bloqueio
             if (resultadoIdentity.Result.IsNotAllowed)
             {
                 return Result.Fail("Login Falhou");
@@ -31,9 +32,12 @@ namespace UsuariosAPI.Services
                     .UserManager
                     .Users
                     .FirstOrDefault(UsuariosAPI =>
-                    UsuariosAPI.NormalizedUserName == request.Username.ToUpper());
-            Token token = _tokenService.CreateToken(identityUser);
+                    UsuariosAPI.NormalizedUserName == usuario.Result.UserName.ToUpper());
+            Token token = _tokenService
+                .CreateToken(identityUser, _signInManager
+                .UserManager.GetRolesAsync(identityUser).Result.FirstOrDefault());
             return Result.Ok().WithSuccess(token.Value);
         }
+
     }
 }

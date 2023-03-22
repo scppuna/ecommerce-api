@@ -1,14 +1,14 @@
 ﻿using FluentResults;
 using Microsoft.AspNetCore.Mvc;
-using SprintCinco.Dao;
-using SprintCinco.Data.Dtos.CentroDistribuicaoDtos;
-using SprintCinco.Models;
-using SprintCinco.Services;
+using IEcommerceAPI.Repository;
+using IEcommerceAPI.Data.Dtos.CentroDistribuicaoDtos;
+using IEcommerceAPI.Models;
+using IEcommerceAPI.Services;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace SprintCinco.Controllers
+namespace IEcommerceAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -36,13 +36,6 @@ namespace SprintCinco.Controllers
             var centroPesquisado = _service.BuscarCDPorId(id);
             return Ok(centroPesquisado);
         }
-
-        //[HttpGet("{nome}")]
-        //public IActionResult PesquisarCentroPorNome(string nome)
-        //{
-        //    var pesquisaNome = _service.BuscarCDPorNome(nome);
-        //    return Ok(pesquisaNome);
-        //}
 
         [HttpGet("PesquisarComFiltro")]
         public IReadOnlyList<CentroDistribuicao> PesquisarCentroDistribuicaoPorFiltro([FromQuery] string nome, [FromQuery] string logradouro, [FromQuery] string bairro,

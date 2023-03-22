@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace SprintCinco.Data.Dtos.CentroDistribuicaoDtos
+namespace IEcommerceAPI.Data.Dtos.CentroDistribuicaoDtos
 {
     public class CreateCDDto
     {

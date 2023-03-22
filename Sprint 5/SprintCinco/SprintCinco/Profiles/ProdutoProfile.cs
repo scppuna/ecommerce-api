@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using SprintCinco.Data.Dtos.ProdutoDtos;
-using SprintCinco.Models;
+using IEcommerceAPI.Data.Dtos.ProdutoDtos;
+using IEcommerceAPI.Models;
 
-namespace SprintCinco.Profiles
+namespace IEcommerceAPI.Profiles
 {
     public class ProdutoProfile : Profile
     {

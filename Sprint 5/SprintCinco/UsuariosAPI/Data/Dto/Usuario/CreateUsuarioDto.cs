@@ -31,17 +31,17 @@ namespace UsuariosAPI.Data.Dto.Usuario
         [Required]
         public string Cep { get; set; }
 
-        public string Logradouro { get; set; }
-        public string Localidade { get; set; }
-        public string Bairro { get; set; }
+        //public string Logradouro { get; set; }
+        //public string Localidade { get; set; }
+        //public string Bairro { get; set; }
 
         [Required]
         public int Numero { get; set; }
 
-        public string Complemento { get; set; }
-        public string UF { get; set; }
+        //public string Complemento { get; set; }
+        //public string UF { get; set; }
 
-        public bool Status { get; set; } = true;
+        //public bool Status { get; set; } = true;
 
         public DateTime DataCriacao { get; set; } = DateTime.Now;
     }

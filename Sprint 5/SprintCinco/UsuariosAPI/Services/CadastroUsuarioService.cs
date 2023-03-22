@@ -30,32 +30,28 @@ namespace UsuariosAPI.Services
         public async Task<Result> EditarUsuario(int id, UpdateUsuarioDto updateUsuarioDto)
         {
             //NOME, DATANASCIMENTO, ENDEREÇO COMPLETO E EMAIL
-            var usuario = await _userManager.Users.FirstOrDefaultAsync(u => u.Id == id);
-            if (usuario == null)
+            var usuario = _userManager.Users.FirstOrDefault(u => u.Id == id);
+            if (usuario != null)
             {
-                return Result.Fail("Usuário não encontrado");
+                if (updateUsuarioDto != null)
+                {
+                    var endereco = await PesquisaUsuarioCep(updateUsuarioDto.Cep);
+                    usuario.Logradouro = endereco.Logradouro;
+                    usuario.Bairro = endereco.Bairro;
+                    usuario.UF = endereco.UF;
+                    usuario.Localidade = endereco.Localidade;
+                    usuario.Nome = updateUsuarioDto.Nome;
+                    usuario.Email = updateUsuarioDto.Email;
+                    usuario.DataNascimento = updateUsuarioDto.DataNascimento;
+                    usuario.DataModificacao = DateTime.Now;
+
+                }
+                var user = _mapper.Map(updateUsuarioDto, usuario);
+                await _userManager.UpdateAsync(usuario);
+                return Result.Ok();
             }
-
-            var endereco = await PesquisaUsuarioCep(updateUsuarioDto.Cep);
-            if(endereco.Cep == null || endereco.Cep == string.Empty)
-            {
-                return Result.Fail("CEP não pode ser nulo!");
-            }
-            usuario.Logradouro = endereco.Logradouro;
-            usuario.Bairro = endereco.Bairro;
-            usuario.UF = endereco.UF;
-            usuario.Localidade = endereco.Localidade;
-            usuario.Nome = updateUsuarioDto.Nome;
-            usuario.Email = updateUsuarioDto.Email;
-            usuario.DataNascimento = updateUsuarioDto.DataNascimento;
-            usuario.DataModificacao = DateTime.Now;
-
-            var mapeamento = _mapper.Map<CustomIdentityUser>(usuario);
-            var resultado = _userManager.UpdateAsync(mapeamento);
-
-            return Result.Ok();
+            return Result.Fail("Usuário não encontrado");
         }
-        //updateasync
 
         public async Task<List<ReadUsuarioDto>> PesquisarUsuarioComFiltro(string username, string cpf, string email, bool? status)
         {
@@ -165,12 +161,8 @@ namespace UsuariosAPI.Services
 
             var resultadoIdentity = _userManager
                 .CreateAsync(usuarioIdentity, createDto.Password);
-
-            //var usuarioRoleResult = _userManager
-            //    .AddToRoleAsync(usuarioIdentity, "admin").Result;
-            
-            //var createRoleResult = _roleManager
-            //    .CreateAsync(new IdentityRole<int>("admin")).Result;
+            var usuarioRoleResult = _userManager
+                .AddToRoleAsync(usuarioIdentity, "regular");
 
             if (resultadoIdentity.Result.Succeeded) return Result.Ok();
             return Result.Fail("Falha ao cadastrar usuário");
