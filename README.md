@@ -6,8 +6,8 @@ Este projeto consiste no desenvolvimento de uma API utilizando a plataforma .NET
 ## Tecnologias Utilizadas
 - **Linguagem de Programação:** C#
 - **Framework:** .NET Core/.NET 5
-- **Banco de Dados:** (Opcional - SQL Server, MySQL, PostgreSQL, etc.)
-- **Ferramentas de Desenvolvimento:** Visual Studio, Visual Studio Code, etc.
+- **Banco de Dados:** (MySQL)
+- **Ferramentas de Desenvolvimento:** Visual Studio Code.
 
 ## Funcionalidades
 - [ ] Autenticação de Usuários
