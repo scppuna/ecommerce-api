@@ -1,5 +1,3 @@
-# Desenvolvimento de API em .NET
-
 # README - Desenvolvimento de API em .NET
 
 ## Descrição do Projeto
